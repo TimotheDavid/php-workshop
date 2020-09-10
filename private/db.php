@@ -5,7 +5,6 @@
   try {
 
     $db = new PDO('mysql:host=localhost; dbname=tutomysql', 'tim', 'timdav');
-    echo "ok";
   }
 
 
