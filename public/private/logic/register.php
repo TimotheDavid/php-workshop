@@ -12,14 +12,8 @@ try{
         $stmt-> bindParam(':'.$var,$value);
     }
     $stmt->execute();
-    echo "ok";
-
-
-
-
-
-
-        }
+    header("Location: /index.php");
+    }
 
 
 
