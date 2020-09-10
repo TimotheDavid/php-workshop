@@ -1,0 +1,27 @@
+
+DROP DATABASE  IF EXISTS tutomysql ;
+CREATE DATABASE  IF NOT EXISTS tutomysql;
+
+
+USE tutomysql;
+
+
+DROP TABLE  IF EXISTS TYPES; 
+CREATE TABLE  IF NOT EXISTS TYPES (
+    id_types INT NOT NULL AUTO_INCREMENT, 
+    name_type VARCHAR(20) NOT NULL, 
+    PRIMARY KEY(id_types)
+);
+
+DROP TABLE  IF EXISTS USER; 
+CREATE TABLE  IF NOT EXISTS USER (
+    id_user INT NOT NULL AUTO_INCREMENT,
+    mail VARCHAR(50) NOT NULL,
+    paswd VARCHAR(50) NOT NULL, 
+    fk_id_type INT NOT NULL,
+    CONSTRAINT fk_type_id FOREIGN KEY (fk_id_type) REFERENCES TYPES (id_types),
+    PRIMARY KEY(id_user)
+
+);
+
+
